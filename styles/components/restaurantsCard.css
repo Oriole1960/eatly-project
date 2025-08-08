@@ -1,0 +1,9 @@
+.restaurants__card {
+    width: 100%;
+    max-width: 396px;
+    height: 297px;
+    border-radius: 30px;
+    box-shadow: 0 65px 40px #e8e8e8;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
