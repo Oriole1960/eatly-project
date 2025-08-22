@@ -260,15 +260,33 @@
 
     <section class="orders">
         <div class="orders__info">
-            <h2>Control <span>Purchases</span>Via Dashboard</h2>
-            <div>
+            <h2>Control <span>Purchases</span> <br> Via Dashboard</h2>
+            <div class="orders__card--conteiner">
                 <div class="orders--card">
                     <img src="./assets/images/forCompanents/card__chiken-hell.png" alt="Chicken Hell">
                     <div>
                         <p>Chicken Hell</p>
-                        <p class="orders--card__status">Yesterday</p>
+                        <p>On The Way</p>
                     </div>
                     <p class="orders--card__time">at 3.45 pm</p>
+                </div>
+
+                <div class="orders--card">
+                    <img src="./assets/images/forCompanents/card__chiken-hell.png" alt="Chicken Hell">
+                    <div car>
+                        <p>Swe Dish</p>
+                        <p>Delivered</p>
+                    </div>
+                    <p class="orders--card__time">Yesterday</p>
+                </div>
+
+                <div class="orders--card">
+                    <img src="./assets/images/forCompanents/card__chiken-hell.png" alt="Chicken Hell">
+                    <div>
+                        <p>Fish Hell Veg</p>
+                        <p>Cancelled</p>
+                    </div>
+                    <p class="orders--card__time">Yesterday</p>
                 </div>
             </div>
         </div>
@@ -276,15 +294,23 @@
         <div class="orders--dashboard">
             <div class="dashboard__filter--header">
                 <p>Purchases</p>
+                <div class="dropdown--container">
 
-                <button class="dashboard__dropdown--btn">
+                <button id="dropdown--btn" class="dropdown--btn--style">
                     <span>This month</span>
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="dropdown--arrow" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.4209 10.2529L12.7033 16.5353L18.9856 10.2529" stroke="#1A202C"
                               stroke-width="2.35588"
                               stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
+
+                <div class="dashboard__dropdown--menu">
+                    <button class="dropdown--menu--style" data-value="This month">This month</button>
+                    <button class="dropdown--menu--style" data-value="This week">This week</button>
+                    <button class="dropdown--menu--style" data-value="Today">Today</button>
+                </div>
+                </div>
             </div>
 
             <div class="dashboard__cards">
@@ -306,12 +332,16 @@
                             </ul>
                         </div>
 
-                        <p>$409.00</p>
+                        <p class="widget__expense--price">$409.00</p>
                     </div>
                     <svg width="409" height="10" viewBox="0 0 409 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect opacity="0.2" x="0.532227" y="0.476562" width="408.353" height="9.42353" rx="4.71176"
                               fill="#6C5FBC"/>
+                        <rect id="expense--chart--fill" x="0.532227" y="0.476562" width="296.841" height="9.42353" rx="4.71176" fill="#6C5FBC"/>
                     </svg>
+
+
+
 
                 </div>
 
@@ -333,12 +363,16 @@
                             </ul>
                         </div>
 
-                        <p>$45.00</p>
+                        <p class="widget__vocher--price">$45.00</p>
                     </div>
                     <svg width="409" height="10" viewBox="0 0 409 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect opacity="0.2" x="0.532227" y="0.476562" width="408.353" height="9.42353" rx="4.71176"
-                              fill="#6C5FBC"/>
+                        <rect opacity="0.2" x="0.532227" y="0.535156" width="408.353" height="9.42353" rx="4.71176" fill="#FBAD18"/>
+
+                            <rect id="vocher--chart--fill" x="0.532227" y="0.535156" width="245.012" height="9.42353" rx="4.71176" fill="#FBAD18"/>
+                        </svg>
+
                     </svg>
+
 
                 </div>
 
@@ -427,6 +461,7 @@
 <script src="js/components/data/utils/renderRestaurantsCard.js"></script>
 <script src="js/components/data/utils/renderDishesCard.js"></script>
 <script src="js/components/data/utils/favoriteCardBtn.js"></script>
+<script src="js/components/data/utils/dropdownAnimation.js"></script>
 
 </body>
 
