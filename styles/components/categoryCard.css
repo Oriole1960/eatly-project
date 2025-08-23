@@ -1,0 +1,35 @@
+.category--healthy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 22.5px;
+    border-radius: 4px;
+    background-color: #F7EDD0;
+    color: #DAA31A;
+    font-size: 11.5px;
+}
+
+.category--trending {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68.5px;
+    height: 22.5px;
+    border-radius: 4px;
+    background-color: #F7C5BA;
+    color: #FB471D;
+    font-size: 11.5px;
+}
+
+.category--supreme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64.5px;
+    height: 22.5px;
+    border-radius: 4px;
+    background-color: #bcd8c7;
+    color: #309D5B;
+    font-size: 11.5px;
+}

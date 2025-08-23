@@ -1,0 +1,252 @@
+.orders__info {
+    max-width: 570px;
+}
+
+.orders__info h2 {
+    margin-bottom: 35px;
+}
+
+.orders__card--conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.orders--card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 345px;
+    height: 88px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+.orders--card:first-child {
+    box-shadow: 0 25px 30px #dfdfdf;
+}
+.orders--card>div p:first-child {
+    font-size: 19px;
+    font-weight: 600;
+    color: black;
+}
+
+.orders--card>div p:last-child {
+    font-size: 12px;
+    color: black;
+}
+
+.orders--card:last-of-type > div p:last-child {
+    color: #F1534E;
+}
+
+
+.orders--card > p {
+    font-size: 13px;
+    color: #A9A9A9;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+}
+
+.orders--card img {
+    margin: 5px 16px 0 20px;
+    width: 77px;
+    height: 80px;
+
+}
+
+.orders--dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 534px;
+    height: 446.5px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: -10px 55px 120px -30px #c3c3c3;
+}
+
+.dashboard__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.dashboard__filter--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 459px;
+    width: 100%;
+    margin-block: 20px 25px;
+}
+
+.dashboard__filter--header p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+
+.dashboard__widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 2px solid #edf2f7;
+    border-radius: 12px;
+    width: 459px;
+    height: 135px;
+}
+
+.widget__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 408.5px;
+    width: 100%;
+}
+
+.widget__title div {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.widget__title p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+
+.title--list li:first-child {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.title--list li:last-child {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #737373;
+}
+
+/*выпадающее меню*/
+
+.dropdown--container {
+    position: relative;
+}
+
+.dropdown--btn--style {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 12px;
+    background-color: #fafafa;
+    width: 176px;
+    height: 53px;
+    z-index: 100;
+}
+
+.dropdown--btn--style:hover {
+    border: 1px solid #6C5FBC;
+}
+
+.dropdown--btn--style span{
+    font-family: 'Manrope', sans-serif;
+    font-weight:600;
+    font-size: 18.5px;
+}
+
+.dropdown--menu--style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #ececec;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #606060;
+    font-family: 'Manrope', sans-serif;
+    font-weight:600;
+    font-size: 18.5px;
+    width: 176px;
+    height: 53px;
+    box-shadow: 0 10px 20px 2px #d6d6d6;
+}
+
+.dropdown--menu--style:hover {
+    background-color: #6C5FBC;
+    color: white;
+}
+
+.dashboard__dropdown--menu {
+    display: block;
+    position: absolute;
+    top: 53px;
+    background-color: transparent;
+    border-radius: 12px;
+    right: 0;
+    width: 176px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(-10px); /* чуть выше */
+    pointer-events: none;         /* блокируем клики пока скрыто */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: -1;
+}
+
+.dashboard__dropdown--menu.active--dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* клики теперь работают */
+    z-index: 2;
+}
+
+/*переход стрелочки*/
+
+#dropdown--arrow {
+    transition: 0.4s ease-out;
+}
+
+#dropdown--arrow.active--dropdown--arrow {
+    rotate: 180deg;
+}
+
+/*анимация показателей*/
+
+#expense--chart--fill {
+    transition: 0.6s ease;
+    transform-origin: left;
+}
+
+#expense--chart--fill.width--week {
+width: 40%;
+}
+
+#expense--chart--fill.width--today {
+    width: 10%;
+}
+
+#vocher--chart--fill {
+    transition: 0.6s ease;
+    transform-origin: left;
+}
+
+#vocher--chart--fill.width--week {
+    width: 26%;
+}
+
+#vocher--chart--fill.width--today {
+    width: 5%;
+}
+
