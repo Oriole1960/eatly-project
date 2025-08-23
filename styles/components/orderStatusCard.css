@@ -159,7 +159,7 @@
 }
 
 .dropdown--btn--style:hover {
-    border: 1px solid #393939;
+    border: 1px solid #6C5FBC;
 }
 
 .dropdown--btn--style span{
@@ -181,11 +181,12 @@
     font-size: 18.5px;
     width: 176px;
     height: 53px;
-    box-shadow: 0 5px 40px 5px #d6d6d6;
+    box-shadow: 0 10px 20px 2px #d6d6d6;
 }
 
 .dropdown--menu--style:hover {
-    border: 1px solid #393939;
+    background-color: #6C5FBC;
+    color: white;
 }
 
 .dashboard__dropdown--menu {

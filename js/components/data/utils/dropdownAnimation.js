@@ -84,8 +84,4 @@ dropMenu.querySelectorAll('button').forEach(item => {
 
 })
 
-renderVocherWidget()
-
-renderExpenseWidget()
-
 renderDropMenu()
