@@ -1,9 +1,4 @@
-.btn--global-style {
-    background-color: #6C5FBC;
-    border-radius: 14px;
-    border-style: none;
-    color: #F9F9F9;
-}
+
 
 body {
     background-color: #F9F9F9;
@@ -44,12 +39,21 @@ nav {
     color: #606060;
     font-size: 18px;
     font-family: 'Inter', sans-serif;
+    transition: 0.2s ease;
+}
+
+.nav__list a:hover {
+    color: #6C5FBC;
 }
 
 .nav__logo {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.nav__logo a:first-child {
+    padding-top: 8px;
 }
 
 .nav__logo a {

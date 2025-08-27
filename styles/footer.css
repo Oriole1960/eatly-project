@@ -38,6 +38,11 @@ footer {
     color: #999999;
     font-size: 18px;
     font-family: 'Inter', sans-serif;
+    transition: 0.2s ease;
+}
+
+.footer-nav__list a:hover {
+    color: #6C5FBC;
 }
 
 .footer__social {

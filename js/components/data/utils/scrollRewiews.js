@@ -10,9 +10,12 @@ const cardWidth = cards[0].offsetWidth + cardMargin;
 
 let currentIndex = 0;
 const trackWidth = sliderTrack.offsetWidth;
-const thumbWidth = sliderThumb.offsetWidth;
-const maxIndex = totalSlides - 1;
-const step = (trackWidth - thumbWidth) / maxIndex;
+const maxIndex = totalSlides - 2;
+const step = (trackWidth) / totalSlides; // полный шаг для расчёта thumb
+
+// Рассчёт ширины ползунка пропорционально числу карточек
+const thumbWidth = Math.max(trackWidth / totalSlides, 30); // минимум 30px
+sliderThumb.style.width = `${thumbWidth}px`;
 
 let isDragging = false;
 
@@ -28,14 +31,22 @@ const updateSlider = (index, animate = true) => {
     }
 
     wrapper.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
-    sliderThumb.style.transform = `translateX(${step * currentIndex}px)`;
+    const thumbStep = (trackWidth - thumbWidth) / maxIndex;
+    sliderThumb.style.transform = `translateX(${thumbStep * currentIndex}px)`;
 };
 
 // Клик по треку
 sliderTrack.addEventListener('click', (e) => {
+    if (e.target === sliderThumb) return;
+
     const clickX = e.offsetX - thumbWidth / 2;
-    const newIndex = Math.round(clickX / step);
-    updateSlider(newIndex);
+    let relativeIndex = (clickX / (trackWidth - thumbWidth)) * maxIndex;
+    const fraction = relativeIndex - Math.floor(relativeIndex);
+
+    if (fraction >= 0.25 && fraction < 0.75) relativeIndex = Math.round(relativeIndex);
+    else relativeIndex = Math.floor(relativeIndex + 0.5);
+
+    updateSlider(relativeIndex);
 });
 
 // Перетаскивание ползунка
@@ -49,12 +60,17 @@ document.addEventListener('mouseup', () => {
     isDragging = false;
     sliderThumb.style.cursor = 'grab';
 
-    // Привязка к ближайшему шагу
     const thumbRect = sliderThumb.getBoundingClientRect();
     const trackRect = sliderTrack.getBoundingClientRect();
     let x = thumbRect.left - trackRect.left + thumbWidth / 2;
-    const newIndex = Math.round(x / step);
-    updateSlider(newIndex, true);
+
+    let relativeIndex = (x / (trackWidth - thumbWidth)) * maxIndex;
+    const fraction = relativeIndex - Math.floor(relativeIndex);
+
+    if (fraction >= 0.25 && fraction < 0.75) relativeIndex = Math.round(relativeIndex);
+    else relativeIndex = Math.floor(relativeIndex + 0.5);
+
+    updateSlider(relativeIndex, true);
 });
 
 document.addEventListener('mousemove', (e) => {
@@ -71,7 +87,6 @@ document.addEventListener('mousemove', (e) => {
 
     sliderThumb.style.transform = `translateX(${x}px)`;
 
-    // Пропорционально двигаем карточки
     const relativeIndex = (x / (trackWidth - thumbWidth)) * maxIndex;
     wrapper.style.transform = `translateX(-${cardWidth * relativeIndex}px)`;
 });

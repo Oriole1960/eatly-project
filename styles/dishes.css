@@ -9,15 +9,7 @@
     padding-block: 30px
 }
 
-h3, h4 {
-    padding-top: 50px;
-    font-size: 45px;
-    font-weight: 600;
-}
 
-h3 span, h4 span {
-    color: #6C5FBC;
-}
 .dishes__card--conteiner {
     display: grid;
     grid-template-columns: repeat(5, minmax(224px, 1fr));

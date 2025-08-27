@@ -1,7 +1,9 @@
 .reviews {
     position: relative;
     max-width: 100%;
-    height: 700px;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 80px;
 }
 
 .reviews::after {
@@ -27,8 +29,9 @@
 .reviews__container {
     position: relative;
     width: 1246px;
+    height: 100%;
     margin: 0 auto;
-
+    text-align: center;
 }
 
 .reviews--container__card--swapper {
@@ -36,7 +39,7 @@
     flex-wrap: nowrap;
     gap: 40px;
     width: 1306px;
-    height: 700px;
+    height: 406px;
     transition: transorm 0.3s ease;
 }
 
@@ -99,7 +102,7 @@
 .slider--track {
     position: absolute;
     z-index: 200;
-    top: 334px;
+    top: 495px;
     right: 10px;
     width: 665px;
     height: 11px;

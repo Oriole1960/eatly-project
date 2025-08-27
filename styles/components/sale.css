@@ -1,5 +1,5 @@
-.sail {
-     
+.sale {
+    margin-block: 110px 200px;
 }
 
 .sail__conteiner {
@@ -15,7 +15,6 @@
     height: 280px;
     background-color: #5C4EAE;
     border-radius: 25px;
-   margin-block: 200px;
     gap: 10px;
 }
 
