@@ -34,6 +34,13 @@
     margin-left: 35px;
 }
 
+.form--subscribe {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 .email-btn {
     display: flex;
     align-items: center;
@@ -52,12 +59,26 @@
     margin-right: 7px;
 }
 
-input[type='email'] {
-    text-align: center;
+.subscribe--input {
+    font-weight: 500;
+}
+
+.subscribe--input::placeholder {
     font-weight: 400;
+}
+.subscribe--input[type='email'] {
+    text-align: center;
+    font-weight: 500;
     font-size: 16.5px;
     height: 53.5px;
     width: 290px;
+    color: #6C5FBC;
     border-style: none;
     background-color: #F9F9F9;
+}
+
+.subscribe--input:focus {
+    border: 2px solid #6C5FBC;
+    border-radius: 12px;
+    outline: none;
 }

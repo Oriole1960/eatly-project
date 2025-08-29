@@ -13,6 +13,10 @@
 }
 
 .intro__title p:first-of-type {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
     color: #201F1F33;
     font-weight: 600;
     font-size: 15px;

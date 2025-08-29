@@ -22,9 +22,10 @@ footer {
     width: 60px;
 }
 
-.footer-nav__logo a {
+.footer-nav__logo a:nth-child(2){
     color: #6C5FBC;
-    font-size: 21px;
+    font-size: 29px;
+    padding-bottom: 5px;
 }
 
 .footer-nav__list {
@@ -34,7 +35,6 @@ footer {
 }
 
 .footer-nav__list a {
-    color: #606060;
     color: #999999;
     font-size: 18px;
     font-family: 'Inter', sans-serif;

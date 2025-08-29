@@ -77,6 +77,17 @@ color: gray;
     font-size: 30px;
     font-weight: 400;
     background-color: #323232;
-    border-style: none;
+    border: solid 0.5px #323232;
     border-radius: 10px;
+    transition: 0.3s ease;
 }
+
+.dishes__card button:last-child:hover {
+    background-color: #656565;
+    color: white;
+}
+
+.dishes__card button:last-child:active {
+    background-color: white;
+    color: #323232;
+
