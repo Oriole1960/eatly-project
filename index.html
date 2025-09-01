@@ -243,14 +243,14 @@
         <div class="dishes__card--conteiner">
 
             <template id="dish-card-template">
-                <div class="dishes__card">
+                <div class="dishes__card" data-id="">
 
                     <div class="dishes__card--img">
                         <button class="favorite--card--btn">
-                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none"
+                            <svg class="favorite--icon" width="22" height="18" viewBox="0 0 22 18" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.3244 3.73981C17.2278 -0.66392 13.2877 1.15923 11.3742 2.88633C11.1631 3.07688 10.837 3.07688 10.6259 2.88634C8.71243 1.15923 4.77193 -0.663922 1.67538 3.73981C0.984688 4.88569 0.406957 7.71082 2.71141 10.6153C4.89825 13.3716 8.89699 15.793 10.7549 16.8599C10.9078 16.9477 11.0924 16.9477 11.2453 16.8599C13.1031 15.793 17.1015 13.3716 19.2883 10.6153C21.5928 7.71082 21.0151 4.88569 20.3244 3.73981Z"
-                                      fill="white" stroke="#383838" stroke-width="2" stroke-linecap="round"/>
+                                       stroke="#383838" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
                         <img src="static/assets/images/forCompanents/card__chiken-hell.png" alt="Chicken-hell">
@@ -657,7 +657,7 @@
             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                       d="M15.3303 2.22919C14.759 2.47913 14.1877 2.65766 13.545 2.72907C14.1877 2.33631 14.6876 1.72931 14.9018 1.0152C14.2948 1.37225 13.6164 1.62219 12.938 1.76501C12.3667 1.15802 11.5454 0.765259 10.6528 0.765259C8.93891 0.765259 7.54638 2.15778 7.54638 3.87164C7.54638 4.12159 7.58209 4.37152 7.61779 4.58576C5.01127 4.44294 2.7261 3.22894 1.19074 1.33655C0.905095 1.80072 0.762272 2.33631 0.762272 2.90759C0.762272 3.97877 1.29786 4.94281 2.1548 5.5141C1.65492 5.5141 1.15504 5.37128 0.726565 5.12134V5.15704C0.726565 6.65669 1.79774 7.94208 3.22598 8.22772C2.97603 8.29913 2.69039 8.33484 2.40474 8.33484C2.19051 8.33484 2.01198 8.29913 1.83345 8.26344C2.22621 9.51312 3.3688 10.4058 4.76132 10.4415C3.69015 11.2627 2.36903 11.7626 0.905095 11.7626C0.655155 11.7626 0.405216 11.7626 0.155273 11.7269C1.5478 12.6195 3.15456 13.1194 4.93986 13.1194C10.6885 13.1194 13.7949 8.37055 13.7949 4.26441C13.7949 4.12159 13.7949 3.97877 13.7949 3.87164C14.4019 3.40748 14.9375 2.83618 15.3303 2.22919Z"
-                      fill="#6C5FBC"/>
+                      />
             </svg>
 
 
@@ -665,9 +665,10 @@
     </div>
 </footer>
 
+<script type="module" src="static/js/components/data/utils/storage.js"></script>
+<script type="module" src="static/js/components/data/utils/renderDishesCard.js"></script>
+<script type="module" src="static/js/components/data/utils/favoriteCardBtn.js"></script>
 <script src="static/js/components/data/utils/renderRestaurantsCard.js"></script>
-<script src="static/js/components/data/utils/renderDishesCard.js"></script>
-<script src="static/js/components/data/utils/favoriteCardBtn.js"></script>
 <script src="static/js/components/data/utils/dropdownAnimation.js"></script>
 <script src="static/js/components/data/utils/scrollRewiews.js"></script>
 
