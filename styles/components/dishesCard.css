@@ -38,7 +38,6 @@
 }
 .dishes__card--img {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     max-width: 201px;
     margin: 0 auto;
@@ -59,7 +58,6 @@
 
 .dishes__card--price p img {
     vertical-align: bottom;
-
 }
 
 .dishes__card--price p span{
@@ -90,4 +88,5 @@ color: gray;
 .dishes__card button:last-child:active {
     background-color: white;
     color: #323232;
+}
 

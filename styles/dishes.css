@@ -16,3 +16,12 @@
     gap: 30px;
     margin-block: 50px 120px;
 }
+
+
+.favorite--icon {
+    cursor: pointer;
+}
+
+.favorite--icon.favorite--icon--active {
+fill: red;
+}
