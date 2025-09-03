@@ -9,9 +9,10 @@
 }
 
 .favorite--card--btn path {
+    
     transition: fill 0.3s ease;
 }
 
 .favorite--card--btn.favorite--icon--active path {
-    fill: black;
+    fill: #e33535;
 }
