@@ -80,20 +80,26 @@ const defaultProducts = [
     },
 ];
 
-const STORAGE_KEY = 'products'
+export class Storage {
+    constructor() {
+        this.products = JSON.parse(localStorage.getItem(this.STORAGE_KEY));
+        this.STORAGE_KEY = 'products'
+    }
 
-let products = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    saveInStorage() {
+        if (!this.products) {
+            this.products = defaultProducts
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.products))
+        }
+    }
 
-if (!products) {
-    products = defaultProducts
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(products))
+    setProductsInLocalStorage(arrayProducts) {
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(arrayProducts))
+    }
+
+    getProductsFromLocalStorage() {
+        const productsJSON = localStorage.getItem(STORAGE_KEY);
+        return JSON.parse(productsJSON);
+    }
 }
 
-export const setProducts = (arrayProducts) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(arrayProducts));
-}
-
-export const getProducts = () => {
-    const productsJSON = localStorage.getItem(STORAGE_KEY);
-    return JSON.parse(productsJSON);
-}
