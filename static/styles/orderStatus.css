@@ -1,0 +1,9 @@
+.orders {
+    display: flex;
+    justify-content: space-between;
+    width: 1247px;
+    margin: 0 auto;
+    border-bottom: 1px solid #606060;
+    padding-bottom: 120px;
+    margin-top: 95px;
+}

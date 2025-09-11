@@ -1,0 +1,35 @@
+.restaurants {
+        position: relative;
+        text-align: center;
+        height: 741px;
+        width: 1247px;
+        margin: 0 auto;
+        padding-block: 30px;
+}
+
+.restaurants__card--conteiner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 396px));
+    gap: 30px;
+    margin-block: 50px 120px;
+}
+/*ПОПРАВИТЬ НАЗВАНИЕ ССЫЛКИ, ДОЛЖНО БЫТЬ УНИВЕРСАЛЬНЫМ!!!!!!!!*/
+.all-dishes {
+    position: absolute;
+    bottom: 140px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.all-dishes:hover {
+    transform: scale(1.2);
+}
+
+.all-dishes span {
+    padding-right: 5px;
+    color: #A9A9A9;
+    font-size: 20px;
+}

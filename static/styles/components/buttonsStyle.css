@@ -1,0 +1,21 @@
+.btn--global-style {
+    background-color: #6C5FBC;
+    border-radius: 14px;
+    border: 0.5px solid #6C5FBC;
+    color: #F9F9F9;
+    transition: 0.3s ease;
+}
+
+.btn--global-style:hover {
+    background-color: #F9F9F9;
+    color: #6C5FBC;
+}
+
+.btn--global-style:active {
+    background-color: #4b3d93;
+    color: #F9F9F9;
+}
+
+.nav__login-signUp>.btn--login:hover {
+    color: #6C5FBC;
+}

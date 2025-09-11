@@ -1,0 +1,84 @@
+.sale {
+    margin-block: 110px 200px;
+}
+
+.sail__conteiner {
+    position: relative;
+    background-image: url(../../assets/icons/Background__for__sale.svg);
+    background-position: -20% 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1214px;
+    height: 280px;
+    background-color: #5C4EAE;
+    border-radius: 25px;
+    gap: 10px;
+}
+
+.sail__conteiner div:last-child {
+    display: block;
+    position: absolute;
+    left: 71%;
+    top: 23%;
+    width: 274px;
+    height: 276px;
+}
+
+.sail__conteiner P {
+    font-size: 70px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-left: 35px;
+}
+
+.form--subscribe {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-btn {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 440px;
+    height: 68px;
+    margin-left: 35px;
+    gap: 10px;
+    border-radius: 14px;
+    background-color: #F9F9F9;
+}
+
+.subscribe-btn {
+    width: 132.5px;
+    height: 53.5px;
+    margin-right: 7px;
+}
+
+.subscribe--input {
+    font-weight: 500;
+}
+
+.subscribe--input::placeholder {
+    font-weight: 400;
+}
+.subscribe--input[type='email'] {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16.5px;
+    height: 53.5px;
+    width: 290px;
+    color: #6C5FBC;
+    border-style: none;
+    background-color: #F9F9F9;
+}
+
+.subscribe--input:focus {
+    border: 2px solid #6C5FBC;
+    border-radius: 12px;
+    outline: none;
+}

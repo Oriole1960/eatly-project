@@ -1,0 +1,18 @@
+.favorite--card--btn{
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    background-color: transparent;
+    border-style: none;
+    height: 18px;
+    width: 22px;
+}
+
+.favorite--card--btn path {
+    
+    transition: fill 0.3s ease;
+}
+
+.favorite--card--btn.favorite--icon--active path {
+    fill: #e33535;
+}

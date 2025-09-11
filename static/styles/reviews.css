@@ -1,0 +1,120 @@
+.reviews {
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.reviews::after {
+    pointer-events: none;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0;
+        background: linear-gradient(
+                to right,
+                #F9F9F9 0%,
+                #F9F9F9 14%,
+                rgba(249, 249, 249, 0) 20%,
+                rgba(249, 249, 249, 0) 80%,
+                #F9F9F9 86%,
+                #F9F9F9 100%
+        );
+        z-index: 1;
+    }
+
+.reviews__container {
+    position: relative;
+    width: 1246px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviews--container__card--swapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 1306px;
+    height: 406px;
+    transition: transorm 0.3s ease;
+}
+
+.reviews--container__card:first-child {
+    height: 346px;
+}
+
+.reviews--container__card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 35px;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    padding: 40px;
+    width: 528px;
+    height: 239px;
+    box-shadow: -10px 40px 50px 10px #e1e1e1;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.reviews--container__info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviews--container__info>div{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reviews--container__text {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.reviews--container__text p:first-of-type {
+    font-size: 21px;
+    color: #030314;
+    margin-bottom: 5px;
+}
+
+.reviews--container__text p:last-of-type {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16.5px;
+    color: #5E5D5D;
+}
+
+/*Слайдер*/
+
+.slider--track {
+    position: absolute;
+    z-index: 100;
+    top: 495px;
+    right: 10px;
+    width: 665px;
+    height: 11px;
+    background-color: #6C5FBC33;
+    border-radius: 50px;
+}
+
+.slider--thumb {
+    position: absolute;
+    width: 133px;
+    height: 11px;
+    background-color: #6C5FBC;
+    border-radius: 50px;
+    transition: left 0.2s ease;
+}
