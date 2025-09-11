@@ -1,4 +1,4 @@
-const defaultProducts = [
+export const defaultProducts = [
     {
         id: 1,
         title: "Chicken Hell",
@@ -81,14 +81,15 @@ const defaultProducts = [
 ];
 
 export class Storage {
-    constructor() {
+    constructor(defaultProducts) {
+        this.defaultProducts = defaultProducts;
         this.products = JSON.parse(localStorage.getItem(this.STORAGE_KEY));
         this.STORAGE_KEY = 'products'
     }
 
     saveInStorage() {
         if (!this.products) {
-            this.products = defaultProducts
+            this.products = this.defaultProducts
             localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.products))
         }
     }
@@ -97,8 +98,8 @@ export class Storage {
         localStorage.setItem(this.STORAGE_KEY, JSON.stringify(arrayProducts))
     }
 
-    getProductsFromLocalStorage() {
-        const productsJSON = localStorage.getItem(STORAGE_KEY);
+    getDishesArrFromLocalStorage() {
+        const productsJSON = localStorage.getItem(this.STORAGE_KEY);
         return JSON.parse(productsJSON);
     }
 }

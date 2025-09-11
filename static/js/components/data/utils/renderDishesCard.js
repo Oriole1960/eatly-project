@@ -1,8 +1,8 @@
-import {getProducts} from './storage.js'
+// import { getProducts } from './storage.js'
+//
+// const products = getProducts()
 
-const products = getProducts()
-
-// Справочник
+// Справочник/
 // const categoriesMap = {
 //     Healthy: {text: "Healthy", class: "category--healthy"},
 //     Trending: {text: "Trending", class: "category--trending"},
@@ -69,16 +69,12 @@ export class DishesCard {
         this.products = products
         this.template = document.getElementById("dish-card-template");
         this.container = document.querySelector(".dishes__card--conteiner");
+        this.OneRowProduct = this.products.slice(0, 5)
         this.categoriesMap = {
             Healthy: {text: "Healthy", class: "category--healthy"},
             Trending: {text: "Trending", class: "category--trending"},
             Supreme: {text: "Supreme", class: "category--supreme"},
         };
-    }
-
-    dishesArrCut() {
-        //  Ограничение на загрузку в grid 5-ти карточек
-        this.OneRowProduct = this.products.slice(0, 5)
     }
 
     dishesCardRender() {
@@ -100,11 +96,11 @@ export class DishesCard {
 
             // Категория
 
-            const categoryConteiner = card.querySelector(".category--card--dishes");
+            const categoryContainer = card.querySelector(".category--card--dishes");
             const category = this.categoriesMap[product.category];
             if (category) {
-                categoryConteiner.textContent = category.text;
-                categoryConteiner.classList.add(category.class);
+                categoryContainer.textContent = category.text;
+                categoryContainer.classList.add(category[product.category].class);
             }
 
             // название
