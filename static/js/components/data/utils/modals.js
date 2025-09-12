@@ -1,3 +1,4 @@
+// Сначала оптимизация кода, потом переведу в класс
 const sighBtn = document.querySelectorAll(".btn-sighup");
 const logBtn = document.querySelectorAll(".btn--login");
 

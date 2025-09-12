@@ -81,7 +81,7 @@ export const defaultProducts = [
 ];
 
 export class Storage {
-    constructor(defaultProducts) {
+    constructor() {
         this.defaultProducts = defaultProducts;
         this.products = JSON.parse(localStorage.getItem(this.STORAGE_KEY));
         this.STORAGE_KEY = 'products'

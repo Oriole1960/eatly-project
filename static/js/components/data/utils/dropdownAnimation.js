@@ -1,4 +1,3 @@
-
 export class AnimationDashWidget {
 
     constructor() {
@@ -73,6 +72,5 @@ export class AnimationDashWidget {
             })
         })
     }
-
 }
 
