@@ -80,27 +80,82 @@ export const defaultProducts = [
     },
 ];
 
+export const defaultRestaurants = [
+    {
+        title: "The Chicken King",
+        time: "24min",
+        rating: 4.8,
+        image: "./assets/images/forCompanents/Restaurant__card__img.png",
+        category: "Healthy"
+    },
+    {
+        title: "The Burger King",
+        time: "34min",
+        rating: 4.9,
+        image: "./assets/images/forCompanents/Restaurant__card__img.png",
+        category: "Trending"
+    },
+    {
+        title: "Taco Palace",
+        time: "20min",
+        rating: 4.7,
+        image: "./assets/images/forCompanents/Restaurant__card__img.png",
+        category: "Supreme"
+    },
+    {
+        title: "Pizza Fortress",
+        time: "30min",
+        rating: 4.6,
+        image: "./assets/images/forCompanents/Restaurant__card__img.png",
+        category: "Healthy"
+    },
+    {
+        title: "Sushi Castle",
+        time: "22min",
+        rating: 4.9,
+        image: "./assets/images/forCompanents/Restaurant__card__img.png",
+        category: "Supreme"
+    },
+];
+
 export class Storage {
     constructor() {
+        this.defaultRestaurants = defaultRestaurants
+        this.restaurants = JSON.parse(localStorage.getItem(this.REST_STORAGE_KEY));
         this.defaultProducts = defaultProducts;
-        this.products = JSON.parse(localStorage.getItem(this.STORAGE_KEY));
-        this.STORAGE_KEY = 'products'
+        this.products = JSON.parse(localStorage.getItem(this.DISH_STORAGE_KEY));
+        this.DISH_STORAGE_KEY = 'products'
+        this.REST_STORAGE_KEY = 'restaurants'
     }
 
     saveInStorage() {
         if (!this.products) {
             this.products = this.defaultProducts
-            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.products))
+            localStorage.setItem(this.DISH_STORAGE_KEY, JSON.stringify(this.products))
+        }
+
+        if (!this.restaurants) {
+            this.restaurants = this.defaultRestaurants
+            localStorage.setItem(this.REST_STORAGE_KEY, JSON.stringify(this.restaurants))
         }
     }
 
     setProductsInLocalStorage(arrayProducts) {
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(arrayProducts))
+        localStorage.setItem(this.DISH_STORAGE_KEY, JSON.stringify(arrayProducts))
+    }
+
+    setRestaurantsInLocalStorage(arrayRestaurants) {
+        localStorage.setItem(this.REST_STORAGE_KEY, JSON.stringify(arrayRestaurants))
     }
 
     getDishesArrFromLocalStorage() {
-        const productsJSON = localStorage.getItem(this.STORAGE_KEY);
+        const productsJSON = localStorage.getItem(this.DISH_STORAGE_KEY);
         return JSON.parse(productsJSON);
+    }
+
+    getRestaurantsFromLocalStorage() {
+        const restaurantsJSON = localStorage.getItem(this.REST_STORAGE_KEY);
+        return JSON.parse(restaurantsJSON);
     }
 }
 

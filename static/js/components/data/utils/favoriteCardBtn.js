@@ -28,10 +28,12 @@
 
 
 export class AddDishesCardToFavorite {
-    constructor(getProducts) {
+    constructor(getProducts, setProducts) {
+        this.getProducts = getProducts
+        this.setProducts = setProducts
         this.container2 = document.querySelector(".dishes__card--conteiner");
     }
-    addToFavoriteDishes(products) {
+    addToFavoriteDishes() {
         this.container2.addEventListener('click', (e) => {
             // Исправляем селектор на реальный элемент, по которому кликаем
             const favoriteBtn = e.target.closest('.favorite--icon');
@@ -40,7 +42,7 @@ export class AddDishesCardToFavorite {
             const cardElement = favoriteBtn.closest('.dishes__card');
             const cardId = Number(cardElement.dataset.id);
 
-            const product = products.find(p => p.id === cardId);
+            const product = this.getProducts.find(p => p.id === cardId);
             if (!product) return;
 
             // Меняем объект напрямую
@@ -50,6 +52,9 @@ export class AddDishesCardToFavorite {
             favoriteBtn.classList.toggle('favorite--icon--active', product.favorite);
 
             console.log('Текущее состояние (snapshot):', JSON.stringify(product));
+            this.setProducts()
         });
+
     }
+
 }
