@@ -69,7 +69,7 @@ export class DishesCard {
         this.products = products
         this.template = document.getElementById("dish-card-template");
         this.container = document.querySelector(".dishes__card--conteiner");
-        this.OneRowProduct = this.products().slice(0, 5)
+        this.OneRowProduct = this.products.slice(0, 5)
         this.categoriesMap = {
             Healthy: {text: "Healthy", class: "category--healthy"},
             Trending: {text: "Trending", class: "category--trending"},
@@ -100,7 +100,7 @@ export class DishesCard {
             const category = this.categoriesMap[product.category];
             if (category) {
                 categoryContainer.textContent = category.text;
-                categoryContainer.classList.add(category[product.category].class);
+                categoryContainer.classList.add(category.class);
             }
 
             // название

@@ -9,6 +9,8 @@ export class AnimationDashWidget {
         this.fillVocherWidth = document.getElementById("vocher--chart--fill")
         this.widgetExpensePrice = document.querySelector(".widget__expense--price")
         this.widgetVocherPrice = document.querySelector(".widget__vocher--price")
+
+        this.#renderDropMenu()
     }
 
     #renderDropMenu() {
@@ -68,7 +70,6 @@ export class AnimationDashWidget {
                 this.dropArrowIcon.classList.remove("active--dropdown--arrow")
                 this.#dropDownAnimation()
                 this.#renderWidgetContent()
-                this.#renderDropMenu()
             })
         })
     }

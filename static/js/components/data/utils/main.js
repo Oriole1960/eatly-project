@@ -6,10 +6,14 @@ import { SliderReviews} from './scrollRewiews.js';
 import { AddDishesCardToFavorite } from './favoriteCardBtn.js';
 
 
+const animationDashWidget = new AnimationDashWidget()
+animationDashWidget.allWidgetAnimation()
+
+
 
 const storage = new Storage(defaultProducts)
 storage.saveInStorage()
-const dishesArr = storage.getDishesArrFromLocalStorage.bind(storage)
+// const dishesArr = storage.getDishesArrFromLocalStorage.bind(storage)
 const saveDishesArrInLocalStorage = storage.setProductsInLocalStorage.bind(storage)
 const getRestaurantsFromLocalStorage = storage.getRestaurantsFromLocalStorage.bind(storage)
 
@@ -21,13 +25,8 @@ restaurantCard.restaurantsCardRender()
 
 
 
-const dishesCard = new DishesCard( dishesArr )
+const dishesCard = new DishesCard( defaultProducts )
 dishesCard.dishesCardRender()
-
-
-
-const animationDashWidget = new AnimationDashWidget()
-animationDashWidget.allWidgetAnimation()
 
 
 
@@ -36,7 +35,11 @@ sliderReviews.init()
 
 
 // Здесь также требуется методы из сторейдж, получить массив из локал и отдать
-const addDishesCardToFavorite = new AddDishesCardToFavorite(dishesArr, saveDishesArrInLocalStorage)
+const addDishesCardToFavorite = new AddDishesCardToFavorite(defaultProducts, saveDishesArrInLocalStorage)
 addDishesCardToFavorite.addToFavoriteDishes()
+
+
+
+
 
 
