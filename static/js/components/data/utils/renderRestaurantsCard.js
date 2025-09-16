@@ -82,7 +82,7 @@
 
 export class RestaurantCard {
     constructor(getRestaurants) {
-        this.restaurants = getRestaurants
+        this.getRestaurants = getRestaurants
 
         this.categoriesMapRest = {
             Healthy: {text: "Healthy", class: "category--healthy--rest"},
@@ -91,7 +91,7 @@ export class RestaurantCard {
         };
         this.templateRest = document.getElementById("restaurant-card-template");
         this.duplicateRestCard = document.querySelector(".restaurants__card--conteiner");
-        this.oneRowRestaurant = this.restaurants().slice(0, 3);
+        this.oneRowRestaurant = this.getRestaurants().slice(0, 3);
     }
 
 

@@ -13,14 +13,14 @@ animationDashWidget.allWidgetAnimation()
 
 const storage = new Storage(defaultProducts)
 storage.saveInStorage()
-// const dishesArr = storage.getDishesArrFromLocalStorage.bind(storage)
+const getDishesArrFromLocalStorage = storage.getDishesArrFromLocalStorage.bind(storage)
 const saveDishesArrInLocalStorage = storage.setProductsInLocalStorage.bind(storage)
 const getRestaurantsFromLocalStorage = storage.getRestaurantsFromLocalStorage.bind(storage)
 
 
 
 // НУЖНО ЗАПУСКАТЬ МЕТОД ЧТОБЫ ВЕРНУТЬ ИЗМЕНЁННЫЙ МАССИВ В ЛОКАЛ СТОРЕЙДЖ ПО ИТОГУ РАБОТЫ РЕНДЕРА
-const restaurantCard = new RestaurantCard(getRestaurantsFromLocalStorage)
+const restaurantCard = new RestaurantCard( getRestaurantsFromLocalStorage )
 restaurantCard.restaurantsCardRender()
 
 
@@ -35,7 +35,7 @@ sliderReviews.init()
 
 
 // Здесь также требуется методы из сторейдж, получить массив из локал и отдать
-const addDishesCardToFavorite = new AddDishesCardToFavorite(defaultProducts, saveDishesArrInLocalStorage)
+const addDishesCardToFavorite = new AddDishesCardToFavorite(getDishesArrFromLocalStorage, saveDishesArrInLocalStorage)
 addDishesCardToFavorite.addToFavoriteDishes()
 
 

@@ -41,8 +41,8 @@ export class AddDishesCardToFavorite {
 
             const cardElement = favoriteBtn.closest('.dishes__card');
             const cardId = Number(cardElement.dataset.id);
-
-            const product = this.getProducts.find(p => p.id === cardId);
+            const productsArray = this.getProducts()
+            const product = productsArray.find(p => p.id === cardId);
             if (!product) return;
 
             // Меняем объект напрямую
@@ -52,7 +52,7 @@ export class AddDishesCardToFavorite {
             favoriteBtn.classList.toggle('favorite--icon--active', product.favorite);
 
             console.log('Текущее состояние (snapshot):', JSON.stringify(product));
-            this.setProducts()
+            this.setProducts(productsArray)
         });
 
     }

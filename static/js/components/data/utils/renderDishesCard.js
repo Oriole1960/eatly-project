@@ -111,7 +111,7 @@ export class DishesCard {
             const infoDiv = card.querySelector(".dishes__card--text > div");
             infoDiv.innerHTML = `
     <p>${product.time} •</p>
-    <img src="./assets/images/forCompanents/star__for__card__rating.png" alt="star">
+    <img src="static/assets/images/forCompanents/star__for__card__rating.png" alt="star">
     <p>${product.rating}</p>
     `
             // цена

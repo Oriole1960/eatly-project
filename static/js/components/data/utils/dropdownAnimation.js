@@ -10,7 +10,7 @@ export class AnimationDashWidget {
         this.widgetExpensePrice = document.querySelector(".widget__expense--price")
         this.widgetVocherPrice = document.querySelector(".widget__vocher--price")
 
-        this.#renderDropMenu()
+        this.#dropDownAnimation()
     }
 
     #renderDropMenu() {
@@ -68,8 +68,9 @@ export class AnimationDashWidget {
                 this.textBtn.textContent = item.dataset.value
                 this.dropMenu.classList.remove("active--dropdown")
                 this.dropArrowIcon.classList.remove("active--dropdown--arrow")
-                this.#dropDownAnimation()
+
                 this.#renderWidgetContent()
+                this.#renderDropMenu()
             })
         })
     }
