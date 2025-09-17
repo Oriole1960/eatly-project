@@ -119,7 +119,7 @@ export const defaultRestaurants = [
 ];
 
 export class Storage {
-    constructor(defaultProducts) {
+    constructor() {
         this.DISH_STORAGE_KEY = 'products'
         this.REST_STORAGE_KEY = 'restaurants'
         this.products = JSON.parse(localStorage.getItem(this.DISH_STORAGE_KEY));
