@@ -6,14 +6,15 @@
     border-style: none;
     height: 18px;
     width: 22px;
-}
-
-
-
-.favorite--card--btn path {
     transition: fill 0.3s ease;
 }
 
-.favorite--card--btn.favorite--icon--active path {
-    fill: #e33535;
+.favorite--icon {
+    fill: #f1f1f1;
+    cursor: pointer;
+}
+
+.favorite--icon.favorite--icon--active {
+    fill: #ea3232;
+    cursor: pointer;
 }

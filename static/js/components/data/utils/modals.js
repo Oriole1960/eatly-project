@@ -1,4 +1,67 @@
-// Сначала оптимизация кода, потом переведу в класс
+export class Modals {
+
+    constructor() {
+
+        this.elementList = {
+            body: document.querySelector("body"),
+
+            buttons: {
+                sighBtn: document.querySelectorAll(".btn-sighup"),
+                logBtn: document.querySelectorAll(".btn--login"),
+            },
+
+            sighupForm: {
+                sighModal: document.querySelector(".validation-sighup__modal"),
+                overlay: document.querySelector(".overlay__validation-sighup"),
+
+                name: {
+                    nameInputSighup: document.getElementById("nameSighup"),
+                    nameSighupSvg1: document.getElementById("nameSighupSvg1"),
+                    nameSighupSvg2: document.getElementById("nameSighupSvg2"),
+                },
+
+                email: {
+                    emailInputSighup: document.getElementById("emailSighup"),
+                    emailSighupSvg1: document.getElementById("emailSighupSvg1"),
+                    emailSighupSvg2: document.getElementById("emailSighupSvg2"),
+                },
+
+                password: {
+                    passInputSighup: document.getElementById("passSighup"),
+                    passSighupSvg1: document.getElementById("passSighupSvg1"),
+                    passSighupSvg2: document.getElementById("passSighupSvg2"),
+                    formToggleSvgSighup1: document.getElementById("sighup-form-toggle-svg1"),
+                    formToggleSvgSighup2: document.getElementById("sighup-form-toggle-svg2"),
+                    formToggleBtnSighup: document.querySelector(".sighup-form-toggle-btn"),
+                },
+            },
+
+            loginForm: {
+
+                logModal: document.querySelector(".validation-login__modal"),
+                overlayLogin: document.querySelector(".overlay__validation-login"),
+
+                email: {
+                    emailInputLogin: document.getElementById("emailLogin"),
+                    emailLoginSvg1: document.getElementById("emailLoginSvg1"),
+                    emailLoginSvg2: document.getElementById("emailLoginSvg2"),
+                },
+
+                password: {
+                    passInputLogin: document.getElementById("passLogin"),
+                    passLoginSvg1: document.getElementById("passLoginSvg1"),
+                    passLoginSvg2: document.getElementById("passLoginSvg2"),
+                    formToggleSvgLogin1: document.getElementById("login-form-toggle-svg1"),
+                    formToggleSvgLogin2: document.getElementById("login-form-toggle-svg2"),
+                    formToggleBtnLogin: document.querySelector(".login-form-toggle-btn"),
+                },
+            }
+        }
+    }
+
+}
+
+
 const sighBtn = document.querySelectorAll(".btn-sighup");
 const logBtn = document.querySelectorAll(".btn--login");
 
@@ -35,31 +98,6 @@ const formToggleSvgSighup1 = document.getElementById("sighup-form-toggle-svg1")
 const formToggleSvgSighup2 = document.getElementById("sighup-form-toggle-svg2")
 const formToggleBtnSighup = document.querySelector(".sighup-form-toggle-btn");
 
-
-// СЛЕДУЮЩАЯ КРУПНАЯ ИТЕРАЦИЯ ЭТО ОПТИМИЗАЦИЯ КОДА JS
-// const allModalInputs = {
-//     inputs: {
-//         nameInputSighup: document.getElementById("nameSighup"),
-//         emailInputSighup: document.getElementById("emailSighup"),
-//         passInputSighup: document.getElementById("passLogin"),
-//         nameInputLogin: document.getElementById("nameLogin"),
-//         emailInputLogin: document.getElementById("emailLogin"),
-//         passInputLogin: document.getElementById("passLogin")
-//     },
-//
-// }
-//
-// const updateInputVisualStateObj = (obj) => {
-//     for (let key in obj) {
-//         const input = obj[key];
-//         input.addEventListener("input", (e) => {
-//             const hasText = input.value.trim().length !== 0
-//             nameSighupSvg1.style.display = hasText ? "none" : "block";
-//             nameSighupSvg2.style.display = hasText ? "block" : "none";
-//             input.classList.toggle("input-focus", hasText)
-//         })
-//     }
-// }
 
 // окно со входом
 sighBtn.forEach((btn) => {
@@ -143,7 +181,6 @@ const updateInputVisualState = () => {
     formToggleSvgLogin1.style.display = "block"
     formToggleSvgSighup2.style.display = "none"
     formToggleSvgLogin2.style.display = "none"
-
 
 
     nameInputSighup.addEventListener("input", (e) => {

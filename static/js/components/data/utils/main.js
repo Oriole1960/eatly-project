@@ -4,6 +4,7 @@ import { Storage, defaultProducts } from './storage.js'
 import { AnimationDashWidget } from './dropdownAnimation.js';
 import { SliderReviews} from './scrollRewiews.js';
 import { AddDishesCardToFavorite } from './favoriteCardBtn.js';
+import { Modals } from './modals.js';
 
 
 const animationDashWidget = new AnimationDashWidget()
@@ -25,7 +26,7 @@ restaurantCard.restaurantsCardRender()
 
 
 
-const dishesCard = new DishesCard( defaultProducts )
+const dishesCard = new DishesCard( getDishesArrFromLocalStorage )
 dishesCard.dishesCardRender()
 
 
