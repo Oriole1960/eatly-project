@@ -41,6 +41,11 @@ addDishesCardToFavorite.addToFavoriteDishes()
 
 
 
+const modals = new Modals()
+modals.init()
+
+
+
 
 
 

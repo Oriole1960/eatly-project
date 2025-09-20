@@ -6,15 +6,16 @@
     border-style: none;
     height: 18px;
     width: 22px;
-    transition: fill 0.3s ease;
+
 }
 
 .favorite--icon {
     fill: #f1f1f1;
     cursor: pointer;
+    transition: fill 0.5s ease;
 }
 
 .favorite--icon.favorite--icon--active {
-    fill: #ea3232;
+    fill: #c84141;
     cursor: pointer;
 }
