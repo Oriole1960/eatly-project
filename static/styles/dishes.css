@@ -18,10 +18,3 @@
 }
 
 
-.favorite--icon {
-    cursor: pointer;
-}
-
-.favorite--icon.favorite--icon--active {
-fill: red;
-}
