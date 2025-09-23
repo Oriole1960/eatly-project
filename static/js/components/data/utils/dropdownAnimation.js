@@ -9,8 +9,6 @@ export class AnimationDashWidget {
         this.fillVocherWidth = document.getElementById("vocher--chart--fill")
         this.widgetExpensePrice = document.querySelector(".widget__expense--price")
         this.widgetVocherPrice = document.querySelector(".widget__vocher--price")
-
-        this.#dropDownAnimation()
     }
 
     #renderDropMenu() {
@@ -62,13 +60,15 @@ export class AnimationDashWidget {
     }
 
     allWidgetAnimation() {
+        if (!document.body.classList.contains('orders') ) return
+
         this.dropMenu.querySelectorAll('button').forEach(item => {
             item.addEventListener('click', () => {
 
                 this.textBtn.textContent = item.dataset.value
                 this.dropMenu.classList.remove("active--dropdown")
                 this.dropArrowIcon.classList.remove("active--dropdown--arrow")
-
+                this.#dropDownAnimation()
                 this.#renderWidgetContent()
                 this.#renderDropMenu()
             })
