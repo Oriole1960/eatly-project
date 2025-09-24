@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eatly</title>
-
+    <link rel="stylesheet" href="static/styles/heroMenu.css">
     <link rel="stylesheet" href="static/styles/reset.css">
     <link rel="stylesheet" href="static/styles/navbar.css">
     <link rel="stylesheet" href="static/styles/hero.css">
@@ -446,18 +446,87 @@
     <section class="hero-menu">
         <div>
             <div class="menu-slider">
-                <div class="sail__conteiner">
-                    <p>GET 50%</p>
+                <div class="menu-slider__slider1">
+                    <div class="slider1__title">
+                        <h1>50% OFF</h1>
+                        <p>WEEKENDS</p>
+                    </div>
 
                     <div>
                         <img src="static/assets/images/Sale__plate.png" alt="plate">
                     </div>
+                </div>
 
+                <div class="menu-slider__buttons">
+                    <div id="menuSliderBtn1"></div>
+                    <div id="menuSliderBtn2"></div>
+                    <div id="menuSliderBtn3"></div>
+                </div>
+
+            </div>
+
+            <div class="menu-search">
+                <form class="menu-search__form" action="#" role="search">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15.1401" cy="15" r="9.37834" transform="rotate(-45 15.1401 15)" stroke="#C2C3CB"
+                                stroke-width="2"/>
+                        <path d="M22.5117 21.9678L27.2554 26.6003" stroke="#C2C3CB" stroke-width="3"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <input class="menu-search__input" type="search" placeholder="Search" aria-label="Product search">
+                </form>
+                <div class="menu-search__buttons">
+                    <button>Food</button>
+                    <button>Resturent</button>
                 </div>
             </div>
-            </div>
-            <div class="menu-widget"></div>
         </div>
+
+        <div class="menu-widget">
+            <div>
+                <p>Category</p>
+                <div class="menu-widget__categories-btn">
+                    <button>
+                        <img src="static/assets/icons/Pizza__for__menuFilter.svg" alt="pizza filter button">
+                    </button>
+                    <button>
+                        <img src="static/assets/icons/Asian__for__menuFilter.svg" alt="asian filter button">
+                    </button>
+                    <button>
+                        <img src="static/assets/icons/Donat__for__menuFilter.svg" alt="donat filter button">
+                    </button>
+                    <button>
+                        <img src="static/assets/icons/ice__for__menuFilter.svg" alt="ice filter button">
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <p>Sort By</p>
+                <div class="menu-widget__sort-btn">
+                    <button>Recomended</button>
+                    <button>Most Popular</button>
+                    <button>Fast Delivery</button>
+                </div>
+            </div>
+
+            <div>
+                <p>Price</p>
+                <div class="menu-widget__price-slider"></div>
+
+                <ul class="menu-widget__price-scale">
+                    <li>$0</li>
+                    <li>$25</li>
+                    <li>$50</li>
+                    <li>$100</li>
+                    <li>$500</li>
+                    <li>$1000</li>
+                </ul>
+            </div>
+            <button class="menu-widget__btn btn--global-style">Apply</button>
+        </div>
+
     </section>
 
     <section class="restaurants">
@@ -472,7 +541,7 @@
                           stroke="#ACADB9" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
-            </div>
+        </div>
 
         <div class="restaurants__card--conteiner">
 
