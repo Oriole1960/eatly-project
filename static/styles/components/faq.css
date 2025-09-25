@@ -1,0 +1,92 @@
+.faq {
+    max-width: 1246px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.faq details {
+    border-bottom: 1px solid #ADADAD;
+    margin-block: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+summary {
+    position: relative;
+    margin-block: 40px 20px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #323142;
+    list-style: none;
+
+}
+
+summary img {
+    position: absolute;
+    top: 0;
+    right: 12px;
+}
+
+summary::after {
+    content: "";
+    top: 14px;
+    right: 23px;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+summary::before {
+    content: "";
+    top: 10px;
+    right: 27px;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(-180deg);
+}
+
+details[open] summary::before {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+
+
+details p {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: #686868;
+    margin-block: 30px;
+}
+
+
+.accordion__summary-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;                          /* важно */
+    transition: grid-template-rows 320ms ease; /* явно */
+}
+
+.accordion__summary-content > .inner {
+    overflow: hidden;  /* чтобы текст не выпрыгивал */
+}
+
+/* обязательно убрать/снять маргины у p */
+.accordion__summary-content p {
+    margin: 0;
+}
+
+details[open] .accordion__summary-content {
+    grid-template-rows: 1fr;
+}
+
