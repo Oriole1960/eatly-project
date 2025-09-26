@@ -104,6 +104,7 @@ export class  SliderReviews {
     }
 
     init() {
+        if (!this.wrapper) return
 
         document.addEventListener('DOMContentLoaded', () => {
             this.updateSlider(0, true);
