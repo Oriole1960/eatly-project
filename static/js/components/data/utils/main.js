@@ -6,6 +6,7 @@ import { SliderReviews} from './scrollRewiews.js';
 import { AddDishesCardToFavorite } from './favoriteCardBtn.js';
 import { Modals } from './modals.js';
 import { FaqIconAnimation } from "./faqIconAmimation.js";
+import { MenuSlider } from './menuSlider.js';
 
 
 const animationDashWidget = new AnimationDashWidget()
@@ -49,6 +50,9 @@ modals.init()
 const faqAnimation = new FaqIconAnimation()
 faqAnimation.openAccordionPanel()
 
+
+const menuSlider = new MenuSlider()
+menuSlider.init()
 
 
 
