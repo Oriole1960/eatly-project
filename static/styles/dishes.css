@@ -4,9 +4,14 @@
     height: 825px;
     width: 1247px;
     margin: 0 auto;
-    border-top: 1px solid #606060;
-    border-bottom: 1px solid #606060;
-    padding-block: 30px
+    border-top: 1px solid #CBCBCB;
+    border-bottom: 1px solid #CBCBCB;
+    padding-block: 30px;
+}
+
+.dishes-menu {
+    height: 741px;
+    padding-block: 120px 30px;
 }
 
 

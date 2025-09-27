@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 900px;
-    padding-top: 300px;
+    padding-top: 200px;
     margin: 0 auto;
     max-width: 1246px;
 }
@@ -11,6 +11,17 @@
     position: relative;
     max-width: 758px;
     height: 251px;
+}
+
+.menu-slider:after {
+    content: "";
+    position: absolute;
+    top: -38px;
+    right: -54px;
+    width: 60px;
+    height: 45px;
+    z-index: 100;
+    background-image: url(../assets/icons/Decoration__for__menuSlider.svg);
 }
 
 .menu-slider__slide {
@@ -52,7 +63,6 @@
     font-weight: 800;
     color: #F7F8FA;
     margin: 0;
-
 }
 
 .slider1__title p {
