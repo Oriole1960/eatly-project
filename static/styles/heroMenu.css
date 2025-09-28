@@ -104,14 +104,15 @@
     max-width: 757px;
     width: 100%;
 }
+
 .menu-search__form {
     margin-top: 85px;
     position: relative;
     width: 100%;
 }
 
-.menu-search__form svg{
-position: absolute;
+.menu-search__form svg {
+    position: absolute;
     top: 23px;
     left: 28px;
 }
@@ -182,28 +183,88 @@ position: absolute;
     width: 313px;
 }
 
-.menu-widget__categories-btn button{
+.menu-widget__categories-btn button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     width: 66px;
     height: 96px;
     border: none;
     border-radius: 18px;
     cursor: pointer;
 }
+.menu-widget__categories-btn button span {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
 
-.menu-widget__categories-btn button:nth-of-type(1) {
+#category-btn1 {
     background-color: #fff3d6;
+    color: #D69900;
 }
 
-.menu-widget__categories-btn button:nth-of-type(2) {
+#category-btn1.active {
+    outline: 4px solid #FFDE8A;
+    box-shadow: 0 12px 22px #bababa;
+    transform: scale(1.05);
+}
+
+#category-btn2 {
     background-color: #F7C5BA;
+    color: #FB471D;
 }
 
-.menu-widget__categories-btn button:nth-of-type(3) {
+#category-btn2.active {
+    outline: 4px solid #ef846a;
+    box-shadow: 0 12px 22px #bababa;
+    transform: scale(1.05);
+}
+
+#category-btn3 {
     background-color: #F9E6CB;
+    color: #E28B14;
 }
 
-.menu-widget__categories-btn button:nth-of-type(4) {
+#category-btn3.active {
+    outline: 4px solid #EDB66B;
+    box-shadow: 0 12px 22px #bababa;
+    transform: scale(1.05);
+}
+
+#category-btn4 {
     background-color: #C5D4FF;
+    color: #002073;
+}
+
+#category-btn4.active {
+    outline: 4px solid #7f99e8;
+    box-shadow: 0 12px 22px #bababa;
+    transform: scale(1.05);
+}
+
+#category-btn1 img {
+    margin-bottom: 16px;
+    width: 36px;
+    height: 36px;
+}
+
+#category-btn2 img {
+    margin-bottom: 8px;
+    width: 51px;
+    height: 51px;
+}
+
+#category-btn3 img {
+    margin-bottom: 18px;
+    width: 35px;
+    height: 35px;
+}
+
+#category-btn4 img {
+    margin-bottom: 12px;
+    width: 23px;
+    height: 42px;
 }
 
 .menu-widget__sort-btn {
