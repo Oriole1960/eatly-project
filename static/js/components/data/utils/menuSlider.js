@@ -34,7 +34,7 @@ export class MenuSlider {
     #autoScroll() {
         setInterval(() => {
             this.#nextSlide()
-        }, 3000)
+        }, 4000)
     }
 
     init() {

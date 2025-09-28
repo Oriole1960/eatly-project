@@ -63,6 +63,15 @@ export class Modals {
         }
     }
 
+    blockNumberInput() {
+        this.ui.sighupForm.name.input.addEventListener("keydown", event => {
+            if (/\d/.test(event.key)) {
+                console.log(event);
+                event.preventDefault();
+            }
+        })
+    }
+
     addListenerToForms() {
         this.ui.buttons.sighBtn.forEach((btn) => {
             btn.addEventListener("click", (e) => {
@@ -206,6 +215,7 @@ export class Modals {
         this.updateInputVisualState()
         this.submitSighupForm()
         this.submitLoginForm()
+        this.blockNumberInput()
     }
 }
 
