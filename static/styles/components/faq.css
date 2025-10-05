@@ -1,0 +1,126 @@
+.faq {
+    max-width: 1246px;
+    width: 100%;
+    height: 900px;
+    margin: 200px auto 130px;
+}
+
+.faq__title {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto 130px;
+}
+
+.faq__title p:first-of-type {
+    position: relative;
+}
+
+.faq__title > p:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 400px;
+    width: 43px;
+    height: 43px;
+    background-image: url("../../assets/icons/Decoration__for__faqTitle.svg");
+}
+
+.faq__title p {
+    line-height: 1.2;
+    font-size: 45px;
+    font-weight: 600;
+    color: #323142;
+}
+
+.faq__title p:last-of-type {
+    font-size: 45px;
+    font-weight: 600;
+    color: #6C5FBC;
+}
+
+.accordion-container__title p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #323142;
+    margin-block: 16px 30px;
+}
+
+.accordion-container__title {
+    border-bottom: 1px solid #ADADAD;
+    position: relative;
+    margin-block: 40px 20px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #323142;
+    list-style: none;
+    cursor: pointer;
+}
+
+.accordion-container__title img {
+    position: absolute;
+    top: 0;
+    right: 12px;
+}
+
+.accordion-container__title::after {
+    content: "";
+    top: 14px;
+    right: 23px;
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+.accordion-container__title::before {
+    content: "";
+    top: 10px;
+    right: 27px;
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+
+.accordion-container__title.open::after {
+    transform: rotate(-180deg);
+}
+
+.accordion-container__title.open::before {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+
+.accordion-container > p {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: #686868;
+    margin-block: 90px 10px;
+}
+
+.accordion-container__panel {
+    height: 0;
+    opacity: 0;
+    width: 65%;
+    overflow: hidden;
+    transition: 0.4s ease;
+    flex-shrink: 0;
+}
+
+.accordion-container__panel.open {
+    opacity: 1;
+}
+
+.accordion-container__panel p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #686868;
+}

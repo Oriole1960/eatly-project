@@ -1,6 +1,12 @@
 export class Modals {
 
     constructor() {
+    //
+    // this.sighupForm = document.getElementById('sighup-form');
+    // this.name = this.sighupForm.name
+
+        // Убрать лишнюю вложенность, получить доступ к элементам формы через саму форму.
+
 
         this.ui = {
             body: document.querySelector("body"),
@@ -61,6 +67,15 @@ export class Modals {
                 submitBtn: document.querySelector(".login__btn"),
             }
         }
+    }
+
+    blockNumberInput() {
+        this.ui.sighupForm.name.input.addEventListener("keydown", event => {
+            if (/\d/.test(event.key)) {
+                console.log(event);
+                event.preventDefault();
+            }
+        })
     }
 
     addListenerToForms() {
@@ -206,6 +221,7 @@ export class Modals {
         this.updateInputVisualState()
         this.submitSighupForm()
         this.submitLoginForm()
+        this.blockNumberInput()
     }
 }
 

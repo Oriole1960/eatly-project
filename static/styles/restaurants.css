@@ -7,6 +7,11 @@
         padding-block: 30px;
 }
 
+.restaurants-menu {
+    height: 610px;
+    margin-top: 60px;
+}
+
 .restaurants__card--conteiner {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 396px));
@@ -24,12 +29,31 @@
     transition: 0.3s ease;
 }
 
-.all-dishes:hover {
+.all-dishes__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.all-dishes:hover,
+.all-dishes__menu:hover {
     transform: scale(1.2);
 }
 
-.all-dishes span {
+.all-dishes span,
+.all-dishes__menu span{
     padding-right: 5px;
     color: #A9A9A9;
     font-size: 20px;
+}
+
+.cards-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards-title h4 {
+    padding: 0;
 }

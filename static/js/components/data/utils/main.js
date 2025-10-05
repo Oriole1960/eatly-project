@@ -5,6 +5,9 @@ import { AnimationDashWidget } from './dropdownAnimation.js';
 import { SliderReviews} from './scrollRewiews.js';
 import { AddDishesCardToFavorite } from './favoriteCardBtn.js';
 import { Modals } from './modals.js';
+import { FaqIconAnimation } from "./faqIconAmimation.js";
+import { MenuSlider } from './menuSlider.js';
+import { CardFilter } from './cardFilter.js';
 
 
 const animationDashWidget = new AnimationDashWidget()
@@ -44,6 +47,20 @@ addDishesCardToFavorite.addToFavoriteDishes()
 const modals = new Modals()
 modals.init()
 
+
+
+const faqAnimation = new FaqIconAnimation()
+faqAnimation.openAccordionPanel()
+
+
+
+const menuSlider = new MenuSlider()
+menuSlider.init()
+
+
+
+const cardFilter = new CardFilter()
+cardFilter.init()
 
 
 
