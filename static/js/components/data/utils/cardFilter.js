@@ -117,19 +117,6 @@ export class CardFilter {
     }
 
 
-    addListenerToPriceSlider() {
-
-    }
-
-    getMenuFilterValues() {
-
-    }
-
-    RenderDisplay() {
-
-    }
-
-
     init() {
         this.addListeners()
         this.updateSlider(this.minPos, this.sliderThumbMin);
