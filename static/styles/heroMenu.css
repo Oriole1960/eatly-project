@@ -194,6 +194,18 @@
     border-radius: 18px;
     cursor: pointer;
 }
+
+@keyframes bounce {
+    0% { transform: scale(1) rotate(0deg);}
+    35% { transform: scale(1.2) rotate(12deg);}
+    75% { transform: scale(1.2) rotate(-10deg);}
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+.menu-widget__categories-btn button.active>img {
+    animation: bounce 0.5s ease-in-out;
+}
+
 .menu-widget__categories-btn button span {
     font-size: 12px;
     margin-bottom: 10px;
@@ -202,6 +214,7 @@
 #category-btn1 {
     background-color: #fff3d6;
     color: #D69900;
+    transition: 0.3s ease;
 }
 
 #category-btn1.active {
@@ -213,6 +226,7 @@
 #category-btn2 {
     background-color: #F7C5BA;
     color: #FB471D;
+    transition: 0.3s ease;
 }
 
 #category-btn2.active {
@@ -224,6 +238,7 @@
 #category-btn3 {
     background-color: #F9E6CB;
     color: #E28B14;
+    transition: 0.3s ease;
 }
 
 #category-btn3.active {
@@ -235,6 +250,7 @@
 #category-btn4 {
     background-color: #C5D4FF;
     color: #002073;
+    transition: 0.3s ease;
 }
 
 #category-btn4.active {
@@ -283,16 +299,81 @@
     cursor: pointer;
     font-size: 16px;
     color: #ACADB9;
-
 }
 
-.menu-widget__price-slider {
+.menu-widget__sort-btn button.active {
+    color: #6C5FBC;
+}
+
+.menu-widget__price-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-widget__price-label{
+    display: flex;
+    gap: 25px;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.menu-widget__price-label.active {
+    opacity: 1;
+}
+
+.menu-widget__price-label span{
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    color: #6C5FBC;
+}
+
+.menu-widget__price-label span.active {
+    color: #6C5FBC;
+}
+
+.menu-widget__track {
+    position: relative;
     height: 5.5px;
     width: 100%;
-    max-width: 302px;
-    background: #6C5FBC;
+    max-width: 294px;
+    background: #BBB6D7;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+.menu-widget__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5px;
+    border-radius: 10px;
+    background-color: #6155AE;
+    z-index: 100;
+}
+
+.menu-widget__thumb-min,
+.menu-widget__thumb-max {
+    position: absolute;
+    top: -8px;
+    height: 21px;
+    width: 21px;
+    background: #6C5FBC;
+    border: 4px solid #BBB6D7;
+    border-radius: 50%;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.menu-widget__thumb-min {
+    transform: translateX(-50%);
+    left: 0;
+}
+
+.menu-widget__thumb-max {
+    transform: translateX(-50%);
+    left: 100%;
 }
 
 .menu-widget__price-scale {

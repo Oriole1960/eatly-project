@@ -1,6 +1,12 @@
 export class Modals {
 
     constructor() {
+    //
+    // this.sighupForm = document.getElementById('sighup-form');
+    // this.name = this.sighupForm.name
+
+        // Убрать лишнюю вложенность, получить доступ к элементам формы через саму форму.
+
 
         this.ui = {
             body: document.querySelector("body"),

@@ -511,19 +511,19 @@
             <div>
                 <p>Category</p>
                 <div class="menu-widget__categories-btn">
-                    <button id="category-btn1">
+                    <button id="category-btn1" data-category="pizza">
                         <img src="static/assets/icons/Pizza__for__menuFilter.svg" alt="pizza filter button">
                         <span>Pizza</span>
                     </button>
-                    <button id="category-btn2">
+                    <button id="category-btn2" data-category="asian">
                         <img src="static/assets/icons/Asian__for__menuFilter.svg" alt="asian filter button">
                         <span>Asian</span>
                     </button>
-                    <button id="category-btn3">
+                    <button id="category-btn3" data-category="donat">
                         <img src="static/assets/icons/Donat__for__menuFilter.svg" alt="donat filter button">
                         <span>Donat</span>
                     </button>
-                    <button id="category-btn4">
+                    <button id="category-btn4" data-category="ice">
                         <img src="static/assets/icons/ice__for__menuFilter.svg" alt="ice filter button">
                         <span>Ice</span>
                     </button>
@@ -533,22 +533,35 @@
             <div>
                 <p>Sort By</p>
                 <div class="menu-widget__sort-btn">
-                    <button>Recomended</button>
-                    <button>Most Popular</button>
-                    <button>Fast Delivery</button>
+                    <button data-sort="fastDelivery">Fast Delivery</button>
+                    <button data-sort="recommended">Recomended</button>
+                    <button data-sort="popular">Most Popular</button>
                 </div>
             </div>
 
             <div>
-                <p>Price</p>
-                <div class="menu-widget__price-slider"></div>
+                <div class="menu-widget__price-title">
+                    <p>Price</p>
+                    <div class="menu-widget__price-label">
+                        <span id="minPrice">0</span>
+                        <span> - </span>
+                        <span id="maxPrice">1000 $</span>
+                    </div>
+
+                </div>
+
+
+                <div class="menu-widget__track">
+                    <div class="menu-widget__fill"></div>
+                    <div class="menu-widget__thumb-min"></div>
+                    <div class="menu-widget__thumb-max"></div>
+                </div>
 
                 <ul class="menu-widget__price-scale">
                     <li>$0</li>
-                    <li>$25</li>
-                    <li>$50</li>
-                    <li>$100</li>
+                    <li>$250</li>
                     <li>$500</li>
+                    <li>$750</li>
                     <li>$1000</li>
                 </ul>
             </div>

@@ -7,6 +7,7 @@ import { AddDishesCardToFavorite } from './favoriteCardBtn.js';
 import { Modals } from './modals.js';
 import { FaqIconAnimation } from "./faqIconAmimation.js";
 import { MenuSlider } from './menuSlider.js';
+import { CardFilter } from './cardFilter.js';
 
 
 const animationDashWidget = new AnimationDashWidget()
@@ -47,12 +48,19 @@ const modals = new Modals()
 modals.init()
 
 
+
 const faqAnimation = new FaqIconAnimation()
 faqAnimation.openAccordionPanel()
 
 
+
 const menuSlider = new MenuSlider()
 menuSlider.init()
+
+
+
+const cardFilter = new CardFilter()
+cardFilter.init()
 
 
 
