@@ -203,24 +203,11 @@ export class Modals {
         })
     }
 
-    submitSighupForm() {
-        this.ui.sighupForm.submitBtn.addEventListener("click", (event) => {
-            event.preventDefault()
-        })
-    }
-
-    submitLoginForm() {
-        this.ui.loginForm.submitBtn.addEventListener("click", (event) => {
-            event.preventDefault()
-        })
-    }
 
     init() {
         this.addListenerToForms()
         this.switchPassword()
         this.updateInputVisualState()
-        this.submitSighupForm()
-        this.submitLoginForm()
         this.blockNumberInput()
     }
 }

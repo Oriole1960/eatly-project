@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="static/styles/components/favoriteCardBtn.css">
     <link rel="stylesheet" href="static/styles/components/categoryRestCard.css">
     <link rel="stylesheet" href="static/styles/components/buttonsStyle.css">
-    <link rel="stylesheet" href="static/styles/components/modals.css">
+    <link rel="stylesheet" href="static/styles/components/overlay.css">
+    <link rel="stylesheet" href="static/styles/components/formsValidation.css">
     <link rel="stylesheet" href="static/styles/components/faq.css">
     <link rel="stylesheet" href="static/styles/dishes.css">
     <link rel="stylesheet" href="static/styles/reviews.css">
@@ -102,10 +103,23 @@
 
                     <p>OR</p>
 
-                    <form class="modal__form">
+                    <form class="modal__form"
+                          id="signup-form"
+                          method="post"
+                          data-js-form
+                          novalidate>
 
                         <div>
-                            <input id="nameSighup" type="text" placeholder="FULL NAME">
+                            <input id="nameSighup"
+                                   name="name"
+                                   type="text"
+                                   placeholder="FULL NAME"
+                                   required minlength="2"
+                                   maxlength="18" aria-errormessage="name-errors"
+                                   title="Имя должно содержать от 3, до 12 символов">
+
+                            <span class="field-errors" id="name-errors" data-js-form-field-errors></span>
+
                             <label for="nameSighup">
                                 <svg id="nameSighupSvg1" width="22" height="23" viewBox="0 0 22 23" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +144,20 @@
                         </div>
 
                         <div>
-                            <input id="emailSighup" type="email" placeholder="EMAIL" autocomplete="email">
+                            <input id="emailSighup"
+                                   name="email"
+                                   type="email"
+                                   placeholder="EMAIL"
+                                   autocomplete="email"
+                                   minlength="6"
+                                   maxlength="30"
+                                   aria-errormessage="email-errors"
+                                   title="Неверный формат email. Адрес должен выглядеть как example@mail.com"
+                                   required
+                                   pattern="^[^@]+@[^@]+\.[^@]+$">
+
+                            <span class="field-errors" id="email-errors" data-js-form-field-errors></span>
+
                             <label for="emailSighup">
                                 <svg id="emailSighupSvg1" width="23" height="18" viewBox="0 0 23 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +179,19 @@
                         </div>
 
                         <div>
-                            <input id="passSighup" type="password" placeholder="PASSWORD">
+                            <input id="passSighup"
+                                   name="password"
+                                   type="password"
+                                   placeholder="PASSWORD"
+                                   required
+                                   minlength="6"
+                                   maxlength="16"
+                                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+"
+                                   aria-errormessage="password-errors"
+                                   title="Пароль должен содержать, символы верхнего и нижниго регистра, а также цифры">
+
+                            <span class="field-errors" id="password-errors" data-js-form-field-errors></span>
+
                             <label for="passSighup">
                                 <svg id="passSighupSvg1" height="24" viewBox="0 0 19 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -203,10 +242,8 @@
                             </button>
                         </div>
 
-
+                        <button class="sighup__btn btn--global-style" type="submit">SIGH UP</button>
                     </form>
-
-                    <button class="sighup__btn btn--global-style">SIGH UP</button>
                     <p class="sighup__register">Already Have An Account?
                         <button class="btn--login">Log In</button>
                     </p>
@@ -303,10 +340,26 @@
 
                     <p>OR</p>
 
-                    <form class="modal__form">
+                    <form class="modal__form"
+                          id="login-form"
+                          method="post"
+                          data-js-form
+                          novalidate>
 
                         <div>
-                            <input id="emailLogin" type="email" placeholder="EMAIL" autocomplete="email">
+                            <input id="emailLogin" name="email"
+                                   type="email"
+                                   placeholder="EMAIL"
+                                   autocomplete="email"
+                                   minlength="6"
+                                   maxlength="30"
+                                   aria-errormessage="email-login-errors"
+                                   title="Неверный формат email. Адрес должен выглядеть как example@mail.com"
+                                   required
+                                   pattern="^[^@]+@[^@]+\.[^@]+$">
+
+                            <span class="field-errors" id="email-login-errors" data-js-form-field-errors></span>
+
                             <label for="emailLogin">
                                 <svg id="emailLoginSvg1" width="23" height="18" viewBox="0 0 23 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -329,7 +382,18 @@
                         </div>
 
                         <div>
-                            <input id="passLogin" type="password" placeholder="PASSWORD">
+                            <input id="passLogin"
+                                   name="password"
+                                   type="password"
+                                   placeholder="PASSWORD"
+                                   required
+                                   minlength="6"
+                                   maxlength="16"
+                                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+"
+                                   aria-errormessage="password-login-errors"
+                                   title="Пароль должен содержать, символы верхнего и нижниго регистра, а также цифры">
+
+                            <span class="field-errors" id="password-login-errors" data-js-form-field-errors></span>
                             <label for="passLogin">
                                 <svg id="passLoginSvg1" width="19" height="24" viewBox="0 0 19 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -478,7 +542,6 @@
                         <img src="static/assets/images/Sale__plate.png" alt="plate">
                     </div>
                 </div>
-
 
 
                 <div class="menu-slider__buttons">

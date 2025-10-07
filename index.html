@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="static/styles/components/favoriteCardBtn.css">
     <link rel="stylesheet" href="static/styles/components/categoryRestCard.css">
     <link rel="stylesheet" href="static/styles/components/buttonsStyle.css">
-    <link rel="stylesheet" href="static/styles/components/modals.css">
+    <link rel="stylesheet" href="static/styles/components/overlay.css">
     <link rel="stylesheet" href="static/styles/dishes.css">
     <link rel="stylesheet" href="static/styles/reviews.css">
     <link rel="stylesheet" href="static/styles/restaurants.css">
@@ -101,10 +101,19 @@
 
                     <p>OR</p>
 
-                    <form class="modal__form" id="signup-form">
+                    <form class="modal__form"  id="signup-form" data-js-form novalidate>
 
                         <div>
-                            <input id="nameSighup" name="name" type="text" placeholder="FULL NAME">
+                            <input id="nameSighup"
+                                   name="name"
+                                   type="text"
+                                   placeholder="FULL NAME"
+                                   required minlength="2"
+                                   maxlength="18" aria-errormessage="name-errors"
+                                   title="Имя должно содержать от 3, до 12 символов">
+
+                            <span class="field-errors" id="name-errors" data-js-form-field-errors ></span>
+
                             <label for="nameSighup">
                                 <svg id="nameSighupSvg1" width="22" height="23" viewBox="0 0 22 23" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +138,15 @@
                         </div>
 
                         <div>
-                            <input id="emailSighup" name="email" type="email" placeholder="EMAIL" autocomplete="email">
+                            <input id="emailSighup"
+                                   name="email"
+                                   type="email"
+                                   placeholder="EMAIL"
+                                   autocomplete="email"
+                                   aria-errormessage="email-errors" title="Адрес почты должен содержать символ @">
+
+                            <span class="field-errors" id="email-errors" data-js-form-field-errors ></span>
+
                             <label for="emailSighup">
                                 <svg id="emailSighupSvg1" width="23" height="18" viewBox="0 0 23 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +168,19 @@
                         </div>
 
                         <div>
-                            <input id="passSighup" name="password"  type="password" placeholder="PASSWORD">
+                            <input id="passSighup"
+                                   name="password"
+                                   type="password"
+                                   placeholder="PASSWORD"
+                                   required
+                                   minlength="6"
+                                   maxlength="16"
+                                   pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':\\|,.<>/?]).+"
+                                   aria-errormessage="password-errors"
+                                   title="Пароль должен содержать от 6, до 16 символов. Символы верхнего и нижнего регистра, а также спец символы !@#$">
+
+                            <span class="field-errors" id="password-errors" data-js-form-field-errors></span>
+
                             <label for="passSighup">
                                 <svg id="passSighupSvg1" height="24" viewBox="0 0 19 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -438,6 +467,7 @@
         </div>
 
     </div>
+
 
 </header>
 

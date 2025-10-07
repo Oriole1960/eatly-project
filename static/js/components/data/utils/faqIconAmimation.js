@@ -1,10 +1,13 @@
 export class FaqIconAnimation {
     constructor() {
         this.accordion = document.querySelector(".faq");
+
         this.accordionPanels = document.querySelectorAll(".accordion-container__panel");
     }
 
-    openAccordionPanel() {
+   switchAccordionPanel() {
+       if (!this.accordion) return
+
         this.accordion.addEventListener("click", (event) => {
             const title = event.target.closest(".accordion-container__title")
 

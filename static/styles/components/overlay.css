@@ -1,0 +1,57 @@
+
+body {
+    overflow: visible;
+    background-color: #F9F9F9;
+}
+
+body.overlayOn {
+    overflow: hidden;
+}
+
+.overlay__validation-sighup,
+.overlay__validation-login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s ease;
+    z-index: -1;
+}
+
+.overlay__validation-sighup.overlayOn,
+.overlay__validation-login.overlayOn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+.validation-sighup__modal,
+.validation-login__modal {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    max-width: 1440px;
+    width: 100%;
+    height: 960px;
+    background-color: #FFFFFF;
+    left: 300px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.2s ease;
+    z-index: -1;
+}
+
+.validation-sighup__modal.overlayOn,
+.validation-login__modal.overlayOn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1000;
+}
