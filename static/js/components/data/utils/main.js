@@ -8,6 +8,7 @@ import { Modals } from './modals.js';
 import { FaqIconAnimation } from "./faqIconAmimation.js";
 import { MenuSlider } from './menuSlider.js';
 import { CardFilter } from './cardFilter.js';
+import { FormValidation} from './formsValidation.js';
 
 
 const animationDashWidget = new AnimationDashWidget()
@@ -50,7 +51,7 @@ modals.init()
 
 
 const faqAnimation = new FaqIconAnimation()
-faqAnimation.openAccordionPanel()
+faqAnimation.switchAccordionPanel()
 
 
 
@@ -61,6 +62,11 @@ menuSlider.init()
 
 const cardFilter = new CardFilter()
 cardFilter.init()
+
+
+
+new FormValidation()
+
 
 
 

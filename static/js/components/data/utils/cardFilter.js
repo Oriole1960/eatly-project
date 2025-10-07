@@ -118,6 +118,7 @@ export class CardFilter {
 
 
     init() {
+        if (!this.filterContainer)
         this.addListeners()
         this.updateSlider(this.minPos, this.sliderThumbMin);
         this.updateSlider(this.maxPos, this.sliderThumbMax);

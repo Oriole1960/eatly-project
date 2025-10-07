@@ -5,8 +5,9 @@ export class MenuSlider {
         this.index = 0
     }
 
-    #showSlide(i) {
 
+
+    #showSlide(i) {
         this.slide.forEach(element => {
             element.classList.remove('active')
         })
@@ -38,6 +39,7 @@ export class MenuSlider {
     }
 
     init() {
+        if (!this.slide.length || !this.sliderBtns.length) return
         this.#showSlide(this.index)
         this.#goToSlide()
         this.#autoScroll()
