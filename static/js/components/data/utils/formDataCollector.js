@@ -1,17 +1,17 @@
 export class FormDataCollector {
     selectors = {
-        login: document.getElementById('signup-form'),
-        signup: document.getElementById('login-form'),
+        login: document.getElementById('login-form'),
+        signup: document.getElementById('signup-form'),
     }
-    constructor() {}
-
+    constructor() {
+        this.bindEvents()
+    }
 
     extractData(event) {
        const formElement = event.target.closest('[data-js-form]')
         if (!formElement) return
 
         const formData = Object.fromEntries( new FormData(formElement).entries() )
-
         this.onFormSubmit(formData, formElement)
     }
 
